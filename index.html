@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Get Roblox User ID</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#submit_btn').click(function(event) {
+                event.preventDefault();
+
+                var username = $('#username').val();
+                $.ajax({
+                    type: 'POST',
+                    url: '/get_user_id',
+                    contentType: 'application/json',
+                    data: JSON.stringify({'username': username}),
+                    success: function(response) {
+                        if (response.error) {
+                            $('#result').text(response.error);
+                        } else {
+                            $('#result').html('<p>Username: ' + response.username + '</p><p>User ID: ' + response.user_id + '</p>');
+                        }
+                    },
+                    error: function(xhr, status, error) {
+                        console.error('Error:', error);
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h2>Get Roblox User ID</h2>
+    <form>
+        <label for="username">Enter Roblox Username:</label><br>
+        <input type="text" id="username" name="username" required><br><br>
+        <button id="submit_btn" type="button">Get User ID</button>
+    </form>
+    <div id="result"></div>
+</body>
+</html>
