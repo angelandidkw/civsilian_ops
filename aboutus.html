@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Civilian Operations</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+    /* Initial state for fade-in effect */
+    .fade-in {
+        opacity: 0;
+        transition: opacity 1s ease;
+    }
+
+    /* Add this class to trigger the fade-in animation */
+    .fade-in.show {
+        opacity: 1;
+    }
+
+    /* Ensure sections are hidden initially */
+    #section1, #section2 {
+        display: none;
+    }
+    </style>
+</head>
+<body class="bg-white-100 text-white-800">
+
+    <body class="bg-black text-white">
+        <header class="bg-black text-white py-4">
+            <div class="container mx-auto flex justify-between items-center">
+                <!-- Logo on the left -->
+                <a href="index.html">
+                    <img src="https://cdn.discordapp.com/icons/1281052064478396437/25b5c63cefff13d0b8cd59e004fea7c9.png?size=512" alt="Logo" class="h-20 w-20 mr-2"> 
+                </a>
+                <!-- Title and Navigation Centered -->
+                <div class="flex-grow text-center">
+                    <h1 class="text-2xl font-bold transition-colors duration-300">Civilian Operations</h1>
+                    <nav class="mt-4">
+                        <ul class="flex justify-center space-x-6">
+                            <li><a href="Community.html" class="hover:text-gray-400 transition-colors duration-300">Community</a></li>
+                            <li><a href="application.html" class="hover:text-gray-400 transition-colors duration-300">Application</a></li>
+                            <li><a href="https://discord.gg/HJdQ7NRAKy" class="hover:text-gray-400 transition-colors duration-300">Discord</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- Empty div for spacing purposes -->
+                <div class="flex items-center"></div>
+            </div>
+        </header>
+
+    <!-- About Us Section -->
+    <section class="container mx-auto my-10">
+        <div class="container mx-auto py-10">
+            <div class="bg-white-900 text-black text-center p-20 rounded-lg shadow-lg">
+                <h2 class="text-4xl font-bold mb-7">Who We Are</h2>
+                <p class="text-center max-w-12xl">
+                    Civilian Operations is a roleplaying community focused on bringing realism and excitement to every session. We aim to create immersive experiences for all of our members through well-organized roleplays and a strong sense of community. Whether you’re running a small business, leading a mafia, or just living day-to-day civilian life, there’s always something new to explore.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 1: What Makes Us Special -->
+    <section id="section1" class="bg-white text-black py-20 fade-in">
+        <div class="bg-white text-black text-center p-6 rounded-lg shadow-lg max-w-xl mx-auto">
+            <h2 class="text-4xl font-bold mb-7">What Makes Us Special</h2>
+            <p class="mb-5">
+                Coming soon..
+            </p>
+            <p>
+                Coming soon..
+            </p>
+            <!-- Button to next section -->
+            <button onclick="showNextSection()" class="mt-10 px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition">Next</button>
+        </div>
+    </section>
+
+    <!-- Section 2: How We Start Each Session -->
+    <section id="section2" class="bg-white text-black py-20 fade-in">
+        <div class="bg-white text-black text-center p-6 rounded-lg shadow-lg max-w-xl mx-auto">
+            <h2 class="text-4xl font-bold mb-7">How We Start Each Session</h2>
+            <p class="mb-4">
+                Coming soon..
+            </p>
+            <p>
+                Coming soon..
+            </p>
+            <!-- Back button to return to the previous section -->
+            <button onclick="showPreviousSection()" class="mt-10 px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition">Back</button>
+        </div>
+    </section>
+
+    <script>
+        // Initially show the first section
+        document.addEventListener("DOMContentLoaded", () => {
+            document.getElementById('section1').style.display = 'block';
+            document.getElementById('section1').classList.add('show');
+        });
+
+        function showNextSection() {
+            // Hide the first section
+            const section1 = document.getElementById('section1');
+            section1.classList.remove('show');
+            setTimeout(() => {
+                section1.style.display = 'none';
+                const section2 = document.getElementById('section2');
+                section2.style.display = 'block';
+                setTimeout(() => {
+                    section2.classList.add('show');
+                }, 100); // Delay to allow fade-in animation
+            }, 100); // Ensure the fade-out effect completes before hiding
+        }
+
+        function showPreviousSection() {
+            // Hide the second section
+            const section2 = document.getElementById('section2');
+            section2.classList.remove('show');
+            setTimeout(() => {
+                section2.style.display = 'none';
+                const section1 = document.getElementById('section1');
+                section1.style.display = 'block';
+                setTimeout(() => {
+                    section1.classList.add('show');
+                }, 100); // Delay to allow fade-in animation
+            }, 100); // Ensure the fade-out effect completes before hiding
+        }
+    </script>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-4">
+        <div class="container mx-auto text-center">
+            <p>Civilian Operations &copy; Copyright 2024 created by godlygucci</p>
+        </div>
+    </footer>
+
+</body>
+</html>
