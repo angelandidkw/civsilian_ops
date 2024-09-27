@@ -4,31 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="Civilian Operations - Coming Soon">
+    <meta name="description" content="Civilian Operations - Create Your Own Operation">
     <meta name="author" content="godlygucci">
     <title>Civilian Operations - Application</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-    <style>
-        /* Style for the video background */
-        .video-background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -1;
-        }
-        /* Overlay to darken the video for better readability */
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5); /* Slightly dark overlay */
-        }
-    </style>
 </head>
 <body class="bg-white text-black">
 
@@ -37,15 +16,15 @@
         <div class="container mx-auto flex justify-between items-center">
             <!-- Logo on the left -->
             <a href="index.html">
-                <img src="https://cdn.discordapp.com/icons/1281052064478396437/25b5c63cefff13d0b8cd59e004fea7c9.png?size=512" alt="Logo" class="h-20 w-20 mr-2"> 
+                <img src="https://cdn.discordapp.com/icons/1281052064478396437/25b5c63cefff13d0b8cd59e004fea7c9.png?size=512" alt="Logo" class="h-20 w-20 mr-2">
             </a>
             <!-- Title and Navigation Centered -->
             <div class="flex-grow text-center">
                 <h1 class="text-2xl font-bold transition-colors duration-300">Civilian Operations</h1>
                 <nav class="mt-6">
                     <ul class="flex justify-center space-x-6">
-                        <li><a href="Community.html" class="hover:text-gray-400 transition-colors duration-300">Community</a></li>
-                        <li><a href="aboutus.html" class="hover:text-gray-400 transition-colors duration-300">About us</a></li>
+                        <li><a href="operations.html" class="hover:text-gray-400 transition-colors duration-300">Operation</a></li>
+                        <li><a href="aboutus.html" class="hover:text-gray-400 transition-colors duration-300">About Us</a></li>
                         <li><a href="https://discord.gg/HJdQ7NRAKy" class="hover:text-gray-400 transition-colors duration-300">Discord</a></li>
                     </ul>
                 </nav>
@@ -53,23 +32,24 @@
         </div>
     </header>
 
-    <!-- Video Background Section -->
-    <video autoplay muted loop class="video-background">
-        <source src="Untitled.mp4" type="video/mp4">
-        Your browser does not support HTML5 video.
-    </video>
-
-    <!-- Dark overlay to enhance text readability -->
-    <div class="overlay"></div>
-
-    <!-- Main Section with Coming Soon Content -->
-    <main class="flex flex-col justify-center items-center min-h-screen relative z-10">
-        <div class="container mx-auto px-4 text-center hover-up">
-            <!-- Coming Soon Container -->
-            <div class="bg-white-800 bg-opacity-70 p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-                <h2 class="text-4xl font-bold mb-4 text-white">Coming Soon</h2>
-                <p class="text-xl text-gray-300 mb-8">We're working hard to bring you something amazing. Stay tuned!</p>
-            </div>
+    <!-- Main Section -->
+    <main class="container mx-auto my-10 p-6 bg-gray-100 rounded-lg shadow-md">
+        <h2 class="text-3xl font-bold text-center mb-6">Create Your Own Operation</h2>
+        <p class="text-lg mb-4">
+            Taking the initiative to create your own operation can open up countless opportunities. Whether it's managing traffic, security, or overseeing large events, starting your own operation allows you to take control and showcase your leadership.
+        </p>
+        <ul class="list-disc list-inside mb-6 text-lg">
+            <li>Develop valuable leadership and management skills.</li>
+            <li>Have the freedom to implement your own strategies and rules.</li>
+            <li>Enhance teamwork by creating a dedicated team of professionals.</li>
+            <li>Gain recognition and reputation within the community.</li>
+        </ul>
+        <p class="text-lg mb-4">
+            By starting your own operation, you not only enhance your own skills but also contribute to the community's safety and efficiency. Seize the opportunity and lead your operation to success!
+        </p>
+        <!-- Apply Now Button -->
+        <div class="text-center">
+            <a href="apply.html" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-6 rounded transition-colors duration-300">Apply Now!</a>
         </div>
     </main>
 
