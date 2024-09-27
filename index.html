@@ -5,17 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Civilian Operations</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <style>
+        /* Typewriter effect CSS */
+        .typewriter h2 {
+            overflow: hidden;
+            border-right: .15em solid white; /* Cursor style */
+            white-space: nowrap;
+            margin: 0 auto;
+            animation: typing 3.5s steps(40, end), blink-caret .75s step-end infinite;
+        }
+
+        /* Typing animation */
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        /* Cursor blink animation */
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: white; }
+        }
+    </style>
 </head>
 <body class="bg-white text-black">
     <header class="bg-black text-white py-4">
         <div class="container mx-auto flex justify-between items-center">
             <!-- Logo on the left -->
             <div class="flex items-center">
-                <img src="https://cdn.discordapp.com/icons/1281052064478396437/25b5c63cefff13d0b8cd59e004fea7c9.png?size=512" alt="Logo" class="h-20 w-20 mr-2"> <!-- Adjust height as needed -->
+                <img src="https://cdn.discordapp.com/icons/1281052064478396437/25b5c63cefff13d0b8cd59e004fea7c9.png?size=512" alt="Logo" class="h-20 w-20 mr-2">
             </div>
             <!-- Title and Navigation Centered -->
             <div class="flex-grow text-center">
-                <h1 class="text-2xl font-bold transition-colors duration-300">Civilian Operations</h1>
+                <h1 class="text-2xl font-bold">Civilian Operations</h1>
                 <nav class="mt-4">
                     <ul class="flex justify-center space-x-6">
                         <li><a href="operations.html" class="hover:text-gray-400 transition-colors duration-300">Operation</a></li>
@@ -25,7 +47,6 @@
                     </ul>
                 </nav>
             </div>
-            <!-- Empty div for spacing purposes -->
             <div class="flex items-center"></div>
         </div>
     </header>
@@ -33,11 +54,14 @@
     <!-- Main Content -->
     <main class="bg-white text-black py-20">
         <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-bold mb-8">Welcome to Civilian Operations Website!</h2>
+            <!-- Apply the typewriter class to this heading -->
+            <div class="typewriter">
+                <h2 class="text-4xl font-bold mb-8">Welcome to Civilian Operations Website!</h2>
+            </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow duration-300 hover:scale-105">
                     <h3 class="text-2xl font-bold mb-4 text-shadow-md">Sign up for a new Civilian Operations</h3>
-                    <a href="https://forms.gle/X1EheoHJpMxXAjsm9?dhc-id=80128290303512580" class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-300">
+                    <a href="application.html" class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-300">
                         Sign Up
                     </a>
                 </div>
@@ -54,19 +78,18 @@
                     </a>
                 </div>
                 <div class="rounded-lg shadow-md p-6 hover:shadow-xl transition-shadow duration-300 hover:scale-105">
-                    <h3 class="text-2xl font-bold mb-4 text-shadow-md">Community - Join discord.gg/gssrp </h3>
+                    <h3 class="text-2xl font-bold mb-4 text-shadow-md">Community - Join discord.gg/gssrp</h3>
                     <a href="https://discord.gg/gssrp" class="bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors duration-300">
                         Join Community
                     </a>
                 </div>
             </div>
         </div>
-    
 
         <!-- About Us Section -->
         <div class="container mx-auto py-20">
             <div class="bg-gray-100 text-black text-center p-10 rounded-lg shadow-lg">
-                <h2 class="text-4xl font-bold mb-8">About Us</h2>
+                <h2 class="text-4xl font-bold mb-8">What is civilian operations</h2>
                 <p class="text-black-300 max-w-4xl mx-auto">
                     Civilian Operations is a dedicated community focused on providing realistic and immersive roleplaying experiences.
                     Our team is composed of passionate individuals who ensure that our operations run smoothly and our members have a great time.
@@ -75,7 +98,6 @@
             </div>
         </div>
     </main>
-
 
     <!-- Footer -->
     <footer class="bg-black text-white py-4">
